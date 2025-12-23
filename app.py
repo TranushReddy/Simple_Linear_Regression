@@ -112,7 +112,7 @@ st.subheader("Predict Tip Amount")
 bill = st.slider("Total Bill", float(df.total_bill.min()), float(df.total_bill.max()))
 tip = model.predict(scaler.transform([[bill]]))[0]
 st.markdown(
-    f'<div class="prediction-box"><p>Predict Tip: ${tip:.2f}<p></div>',
+    f"""<div class="prediction-box"><p>Predict Tip: ${tip:.2f}<p></div>""",
     unsafe_allow_html=True,
 )
 st.markdown("</div>", unsafe_allow_html=True)
